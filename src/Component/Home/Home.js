@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageSlider from '../ImageSlider'
 import Trending from './Trending'
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     <div>
       <h1>Hello Home</h1>
       <Trending/>
+      <ImageSlider/>
     </div>
   )
 }

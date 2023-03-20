@@ -49,7 +49,10 @@ function Navbar() {
           <Link to="mylist" className={classes.navname}>MyList</Link>
         </li>
       </ul>
+
       </div>
+
+      {/* Image Slider  */}
     </div>
   );
 }
