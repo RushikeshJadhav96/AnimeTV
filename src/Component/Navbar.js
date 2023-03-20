@@ -4,29 +4,52 @@ import { Link } from "react-router-dom";
 import Logo from "../Asstets/logo.png";
 
 const useStyle = makeStyles(()=>({
-  
+  navbar:{
+    backgroundColor:'rgb(0,0,0,0.5)',
+    display:'flex',
+    padding:'0px 60px',
+    alignItems:'center'
+  },
+  logoMain:{
+    padding:'10px',
+    // backgroundColor:'red'
+  },
+  Ul:{
+    listStyle:'none',
+    display:'flex'
+  },
+  navname:{
+    textDecoration:'none',
+    margin:'0px 10px',
+    color:'#ffff',
+  },
+  // navname:hover{
+  //   color:'#000'
+  // },
 }));
 function Navbar() {
 
   const classes = useStyle();
 
   return (
-    <div>
-      <img src={Logo} />
+    <div >
+      <div className={classes.navbar}>
+      <img src={Logo}  className={classes.logoMain}/>
       <ul className={classes.Ul}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/"  className={classes.navname}>Home</Link>
         </li>
-        <li>
-          <Link to="movies">Movies</Link>
+        <li className={classes.navname}>
+          <Link to="movies" className={classes.navname}>Movies</Link>
         </li>
-        <li>
-          <Link to="tv-series">TV-Series</Link>
+        <li className={classes.navname}>
+          <Link to="tv-series" className={classes.navname}>TV-Series</Link>
         </li>
-        <li>
-          <Link to="mylist">MyList</Link>
+        <li className={classes.navname}> 
+          <Link to="mylist" className={classes.navname}>MyList</Link>
         </li>
       </ul>
+      </div>
     </div>
   );
 }
